@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+    <title> Honda Civic RS - AL MAIRAJ MORTORS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, red, Black);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        ::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(red,red);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-track{
+    background: rgb(28, 28, 28);
+}
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background-color: #000000c2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            text-align: center;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .car-gallery {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .car-gallery img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .nav-buttons button {
+            background-color: #ff0008;
+            color: #fff;
+            border: none;
+            padding: 10px 5%;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-buttons button:hover {
+            background-color: #ff0004;
+            transform: scale(1.1);
+        }
+
+        .details {
+            margin-bottom: 20px;
+        }
+
+        .details h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #ff0008;
+        }
+
+        .details p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        .whatsapp-link {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #25d366;
+            color: white;
+            padding: 10px 5%;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .whatsapp-link:hover {
+            background-color: #1da851;
+            transform: scale(1.1);
+        }
+
+        footer {
+            margin-top: 20px;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-buttons button {
+                font-size: 0.9rem;
+                padding: 8px 4%;
+            }
+
+            .details h3 {
+                font-size: 1.3rem;
+            }
+
+            .details p {
+                font-size: 0.9rem;
+            }
+
+            .whatsapp-link {
+                font-size: 1rem;
+                padding: 8px 4%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .details h3 {
+                font-size: 1.2rem;
+            }
+
+            .details p {
+                font-size: 0.8rem;
+            }
+
+            .whatsapp-link {
+                font-size: 0.9rem;
+                padding: 7px 3%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="car-gallery">
+            <img id="car-image" src="Honda Civic G10 branco.jpg" alt="Car Image">
+        </div>
+        <div class="nav-buttons">
+            <button id="prev-btn">&#8592;</button>
+            <button id="next-btn">&#8594;</button>
+        </div>
+        <div class="details">
+            <h3 id="car-title"> Honda Civic RS</h3>
+            <p id="car-price">Price: PKR 85 Lacs</p>
+            <p id="car-description">A modern car with unmatched style and performance.</p>
+            <br>
+            <h3 id="car-title">About</h3>
+            <p id="car-description">For Sale: Honda Civic RS - Ultimate Performance & Style
+                Selling my brand-new Honda Civic RS for just 85 Lacs. This premium sedan combines sporty design with cutting-edge features, offering an unmatched driving experience. Equipped with a turbocharged engine, paddle shifters, and a sleek aerodynamic design, the Civic delivers exceptional performance and style.
+                The car boasts a spacious, luxurious interior, leather seats, a digital driver display, and an advanced infotainment system with wireless connectivity. Safety is top-notch with features like Honda Sensing technology, adaptive cruise control, and a 360-degree camera.
+                If you're looking for sophistication, performance, and reliability, this Civic RS is the perfect choice. Contact me now to grab this incredible deal or schedule a viewing! 🚘</p>
+        </div>
+        <a href="https://wa.me/923244094104" class="whatsapp-link" target="_blank">Contact us on WhatsApp</a>
+    </div>
+
+    <script>
+        const carImages = [
+            "Honda Civic G10 branco.jpg",
+            "image_processing20241205-11-a4wdkh.jpg",
+            "59969887b7140.jpg"
+        ];
+
+        const carTitles = [
+            "Honda Civic RS",
+            "Honda Civic RS",
+            "Honda Civic RS"
+        ];
+
+        const carPrices = [
+            "PKR 85 Lacs",
+            "PKR 85 Lacs",
+            "PKR 85 Lacs"
+        ];
+
+        const carDescriptions = [
+            "A modern car with unmatched style and performance.",
+            "A modern car with unmatched style and performance.",
+            "A modern car with unmatched style and performance."
+        ];
+
+        let currentIndex = 0;
+
+        const carImage = document.getElementById('car-image');
+        const carTitle = document.getElementById('car-title');
+        const carPrice = document.getElementById('car-price');
+        const carDescription = document.getElementById('car-description');
+
+        const updateContent = () => {
+            carImage.src = carImages[currentIndex];
+            carTitle.textContent = carTitles[currentIndex];
+            carPrice.textContent = `Price: ${carPrices[currentIndex]}`;
+            carDescription.textContent = carDescriptions[currentIndex];
+        };
+
+        document.getElementById('prev-btn').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + carImages.length) % carImages.length;
+            updateContent();
+        });
+
+        document.getElementById('next-btn').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % carImages.length;
+            updateContent();
+        });
+    </script>
+</body>
+</html>
