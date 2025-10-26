@@ -1,1 +1,2 @@
 # al-mairaj-motors
+This project is a car showroom website that I developed as part of my journey to learn and enhance my web development skills. The website is built entirely using front-end technologies — HTML, CSS, and JavaScript — with multiple interconnected pages seamlessly linked to enable smooth navigation and redirection between sections. It demonstrates my ability to design and structure a professional, user-friendly web interface focused on aesthetics and functionality.
